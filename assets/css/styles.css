@@ -29,15 +29,15 @@ ul {
   padding: 0;
   margin: 0;
 }
+details {
+  cursor: pointer;
+}
 .container {
   background: #ffffff;
   box-shadow: 0 0 40px 30px #ffffff;
   max-width: 1400px;
-  margin: 0 15dvw;
+  margin: 0 3dvw;
   padding: 3rem 0 0;
-}
-.flex {
-  display: flex;
 }
 .btn {
   background: rgba(255, 255, 255, .2);
@@ -103,13 +103,8 @@ h2 {
   }
 }
 
-.why {
-  width: 60%;
-}
 .what {
-  width: 65%;
   text-align: right;
-  margin-left: auto;
 }
 
 .role-interest {
@@ -125,9 +120,10 @@ h2 {
     margin-bottom: .4em;
   }
   .indicator {
-    transform: rotateY(180deg);
-    font-size: 4em;
-    align-content: center;
+    display: none;
+  }
+  .spacer {
+    height: 1.5rem;
   }
   ul.flex {
     justify-content: space-between;
@@ -135,9 +131,6 @@ h2 {
   li.role {
     padding: 1.2rem 1.5rem;
     background-color: var(--secondary-color);
-    width: 45%;
-    transition: all .2s ease;
-    z-index: 2;
     ul {
       list-style-type: "✔";
       li {
@@ -145,9 +138,6 @@ h2 {
         margin-bottom: .1em;
       }
     }
-  }
-  li.role:hover {
-    transform: scale(1.3);
   }
 }
 
@@ -185,11 +175,21 @@ h2 {
   h2 {
     margin-bottom: 1rem;
   }
-  p {
-    padding: 0 3rem;
-  }
   .cta-buttons {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    .btn {
+      width: 45%;
+      max-width: 10.5rem;
+      margin-top: .25rem;
+    }
+    .btn:nth-of-type(2) {
+      align-self: center;
+    }
+    .btn:last-of-type {
+      align-self: flex-end;
+    }
   }
 }
 
@@ -197,4 +197,49 @@ h2 {
 footer {
   text-align: right;
   padding: 1rem 2rem;
+}
+
+@media screen and (min-width: 650px) {
+  .connect .cta-buttons {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .flex {
+    display: flex;
+  }
+  .container {
+    margin: 0 15dvw;
+  }
+  .role-interest li.role {
+    width: 45%;
+    transition: all .2s ease;
+    z-index: 2;
+  }
+  .role-interest li.role:hover {
+    transform: scale(1.3);
+  }
+  .role-interest .indicator {
+    display: inline;
+    transform: rotateY(180deg);
+    font-size: 4em;
+    align-content: center;
+  }
+  .role-interest .spacer {
+    display: none;
+  }
+
+  .why {
+    width: 75%;
+  }
+  .what {
+    width: 80%;
+    margin-left: auto;
+  }
+
+  .connect p {
+    padding: 0 3rem;
+  }
 }

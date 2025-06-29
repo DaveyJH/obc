@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dave J. Horrocks - Application for One Big Circle</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/solid.min.css" />
+    <link rel="stylesheet" href="assets/fontawesome/css/brands.min.css" />
   </head>
   <body>
+    <header>
+      <h1>Dave J. Horrocks</h1>
+      <p class="subtitle">
+        Your next <span class="highlight">Software Engineer</span> ?
+      </p>
+    </header>
     <div class="container">
-      <header>
-        <h1>Dave J. Horrocks</h1>
-        <p class="subtitle">
-          Your next <span class="highlight">Software Engineer</span> ?
-        </p>
-      </header>
-
       <main class="content">
-        <section class="section">
-          <h2>Why a website?</h2>
-          <div>
-            <p>
-              Sometimes life throws you a curveball, and you find your email
-              provider blocking an email with a simple set of PDFs for a job
-              application. Rather than accept defeat, I took this as an
-              opportunity to showcase my skills in a more creative way. I hope
-              this basic HTML page serves as a testament to my enthusiasm,
-              existing competency and my approach to problem solving.
-            </p>
-          </div>
+        <section class="why">
+          <h2>Why a <span class="bold">website</span>?</h2>
+          <p>
+            Sometimes life throws you a curveball, and you find your email
+            provider blocking an email with a simple set of PDFs for a job
+            application. Rather than accept defeat, I took this as an
+            opportunity to showcase my skills in a more creative way. I hope
+            this basic HTML page serves as a testament to my enthusiasm,
+            existing competency and my approach to problem solving.
+          </p>
         </section>
 
-        <section class="section">
-          <h2>What's here for you to see?</h2>
+        <section class="what">
+          <h2>What's <span class="bold">here for you</span> to see?</h2>
           <div>
             <p>
               Not much really! It's a simple page for a simple purpose; to
@@ -41,35 +41,35 @@
           </div>
         </section>
 
-        <section>
-          <div class="role-interest">
-            Interested in:
-            <ul>
-              <li>
-                Junior Software Developer
-                <ul>
-                  <li>Python & JavaScript proficient</li>
-                  <li>AWS services experience</li>
-                  <li>
-                    Rapid learner with deep understanding of language
-                    fundamentals
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Junior Systems Engineer
-                <ul>
-                  <li>Background in hardware and software</li>
-                  <li>Experience with IP and analogue video systems</li>
-                  <li>Innovative problem solver</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+        <section class="role-interest">
+          <h2><span class="bold">Roles</span> I am interesting in:</h2>
+          <ul class="flex">
+            <li class="role">
+              <h3>Junior Software Developer</h3>
+              <ul>
+                <li>Semantic HTML & accessible CSS</li>
+                <li>Python & JavaScript</li>
+                <li>git version control</li>
+                <li>AWS and Docker experience</li>
+                <li>
+                  Rapid learner with deep understanding of language fundamentals
+                </li>
+              </ul>
+            </li>
+            <li class="role">
+              <h3>Junior Systems Engineer</h3>
+              <ul>
+                <li>Background in hardware and software</li>
+                <li>Experience with IP and analogue video systems</li>
+                <li>Innovative problem solver</li>
+                <li>Test mindset with a focus on quality and accuracy</li>
+              </ul>
+            </li>
+          </ul>
         </section>
 
-        <section class="section">
-          <h2>The cover letter</h2>
+        <section class="cover-letter">
+          <h2>The <span class="bold">cover letter</span></h2>
           <details>
             <summary>
               The name of your company seems coincidently on the right track for
@@ -134,13 +134,24 @@
               a journey.
             </p>
           </details>
-          <a href="assets/docs/cover-letter-onebigcircle.pdf" target="download" class="btn">Download CV</a>
-          
+          <a
+            href="assets/docs/cover-letter-onebigcircle.pdf"
+            target="download"
+            class="btn"
+            ><i class="fa-solid fa-file-pdf"></i> Download Cover Letter</a
+          >
+        </section>
+
+        <section class="section">
+          <h2>The <span class="bold">CV</span></h2>
+          <a href="assets/docs/djhorrocks-cv.pdf" target="download" class="btn"
+            ><i class="fa-solid fa-file-pdf"></i> Download CV</a
+          >
         </section>
       </main>
 
-      <section class="cta-section">
-        <h2>Let's Connect</h2>
+      <section class="connect">
+        <h2>Let's connect</h2>
         <p>
           I'm excited about the possibility of joining the One Big Circle team
           and becoming an active contributer to a product making a real impact
@@ -148,60 +159,24 @@
         </p>
         <div class="cta-buttons">
           <a href="mailto:daveyj.dh@googlemail.com" class="btn btn-primary"
-            >Email me</a
+            ><i class="fa-solid fa-at"></i> Email me</a
           >
-          <a href="assets/docs/djhorrocks-cv.pdf" target="download" class="btn">Download CV</a>
           <a
             href="https://linkedin.com/in/davejhorrocks"
             target="_blank"
             rel="noreferer"
             class="btn"
-            >LinkedIn Profile</a
+            ><i class="fa-brands fa-linkedin"></i> LinkedIn Profile</a
           >
           <a
             href="https://github.com/DaveyJH"
             target="_blank"
             rel="noreferer"
             class="btn"
-            >GitHub Profile</a
+            ><i class="fa-brands fa-github"></i> GitHub Profile</a
           >
         </div>
       </section>
     </div>
-
-    <!-- <script>
-      // Add smooth scrolling for any internal links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
-
-      // Add subtle animations on scroll
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const observer = new IntersectionObserver(function (entries) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-          }
-        });
-      }, observerOptions);
-
-      // Apply animation to sections
-      document.querySelectorAll(".section").forEach((section) => {
-        section.style.opacity = "0";
-        section.style.transform = "translateY(30px)";
-        section.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-        observer.observe(section);
-      });
-    </script> -->
   </body>
 </html>
